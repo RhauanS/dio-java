@@ -18,7 +18,8 @@ public class Usuario {
         System.out.println("Status -> TV Ligada ? " + compotamento.ligada);
         System.out.println("Status -> Canal atual: " + compotamento.canal);
         System.out.println("Status -> Volume atual: " + compotamento.volume);
-
+        
+         
 
 
 
