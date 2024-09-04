@@ -1,12 +1,11 @@
-import java.util.Scanner;
 import java.util.Locale;
+import com.rhauan.dadosUsuario.*;
 
 
 public class Usuario {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        Locale.setDefault(Locale.US);
+       
 
         ContaTerminal dados = new ContaTerminal();
 
@@ -24,6 +23,6 @@ public class Usuario {
 
        System.out.println("Olá "+ dados.nomeCliente + ", obrigado por criar uma conta em nosso banco, sua agência é "+ dados.agencia + ", conta "+ dados.numero + " e seu saldo " + dados.Saldo + " já está disponível para saque");
        
-       scanner.close();
+      
     }
 }

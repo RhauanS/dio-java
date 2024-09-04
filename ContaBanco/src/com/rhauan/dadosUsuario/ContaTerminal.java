@@ -1,3 +1,4 @@
+package com.rhauan.dadosUsuario;
 import java.util.Scanner;
 
 public class ContaTerminal {
