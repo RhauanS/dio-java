@@ -8,8 +8,14 @@ import br.com.devflix.gui.Janela;
 public class App {
     public static void main(String[] args) throws Exception {
      Filme  filme = new Filme();
-     Novela novela = new Novela();
+     /*Novela novela = new Novela();
      Documentario documentario = new Documentario();   
-     Janela janela = new Janela();   
+     Janela janela = new Janela();*/ 
+
+     System.out.print("Digite o nome do filme: ");
+     filme.salvarNomeFilme();
+     System.out.println("Nome do filme = " + filme.getNome());
+     
+    
     }
 }

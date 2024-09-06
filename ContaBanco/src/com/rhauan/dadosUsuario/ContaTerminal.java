@@ -1,39 +1,51 @@
 package com.rhauan.dadosUsuario;
 import java.util.Scanner;
 
+
+
 public class ContaTerminal {
+    private int numero;
+    private String agencia;
+    private String nomeCliente;
+    private double saldo;
+
+    
     Scanner scanner = new Scanner(System.in);
     
-    
-    int numero;
-    String agencia;
-    String nomeCliente;
-    double Saldo;
 
-
-    
+   
+    public void salvarNumero() {
+        this.numero = scanner.nextInt();
+        scanner.nextLine();  // Limpa o buffer do scanner
+    }
 
     public void salvarAgencia() {
-        agencia = scanner.nextLine();
-        
+        this.agencia = scanner.nextLine();
     }
 
-    public int salvarNumero() {
-        numero = scanner.nextInt();
-        scanner.nextLine();
-        return numero;  
+    public void salvarNomeCliente() {
+        this.nomeCliente = scanner.nextLine();
     }
 
-    public void salvarNomeClinte() {
-        nomeCliente = scanner.nextLine();
+    public void salvarSaldo() {
+        this.saldo = scanner.nextDouble();
+        scanner.nextLine();  // Limpa o buffer do scanner
     }
 
-    public double salvarSaldo() {
-        Saldo = scanner.nextDouble();
-        scanner.nextLine();
-        return Saldo;     
+    // Métodos getter para acessar os valores fora da classe
+    public int getNumero() {
+        return numero;
     }
 
+    public String getAgencia() {
+        return agencia;
+    }
 
-    
+    public String getNomeCliente() {
+        return nomeCliente;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
 }
