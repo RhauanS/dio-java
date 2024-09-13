@@ -10,8 +10,7 @@ public class ContaTerminal {
     private double saldo;
 
     
-    Scanner scanner = new Scanner(System.in);
-    
+    Scanner scanner = new Scanner(System.in);   
 
    
     public void salvarNumero() {

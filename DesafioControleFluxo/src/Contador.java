@@ -17,21 +17,23 @@ public class Contador {
 			System.out.println(e.getMessage());
 		}
 		
+		terminal.close();
+		
 	}
 	static void contar(int parametroUm, int parametroDois ) throws ParametrosInvalidosException {
 		//validar se parametroUm é MAIOR que parametroDois e lançar a exceção
         if (parametroUm > parametroDois){
 			throw new ParametrosInvalidosException();
 		}     
-        
-		//realizar o for para imprimir os números com base na variável contagem
-		int contagem = parametroDois - parametroUm;		
+        else{
+			//realizar o for para imprimir os números com base na variável contagem
+			int contagem = parametroDois - parametroUm;		
 
-        for (int i = parametroUm; i <= parametroDois; i++) {
-            System.out.println(i);
-        }
+        	for (int i = parametroUm; i <= parametroDois; i++) {
+            	System.out.println(i);
+        	}
 
-        System.out.println("Contagem: " + contagem);
-		
+        	System.out.println("Contagem: " + contagem);
+		}
 	}
 }
