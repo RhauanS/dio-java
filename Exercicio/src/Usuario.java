@@ -7,29 +7,29 @@ public class Usuario {
         UsuarioDados usuario = new UsuarioDados();
         Scanner scanner = new Scanner(System.in);
     
-        // Captura os dados do usuário
+        
         try {
             usuario.SalvarNome();
             usuario.SalvarCpf();
         } catch (InputMismatchException e) {
             System.out.println("Apenas números válidos para o CPF.");
-            scanner.nextLine(); // Limpa o buffer
-            return; // Finaliza a execução caso tenha erro na entrada
+            scanner.nextLine(); // Limpeza de buffer
+            return; 
         }
 
-        // Pede o CPF como string e converte para long
+        
         System.out.println("Digite o CPF para validação:");
         String cpfString = scanner.nextLine();
         long cpfLong;
         try {
-            cpfLong = Long.parseLong(cpfString); // Converte a string para long
+            cpfLong = Long.parseLong(cpfString); 
         } catch (NumberFormatException e) {
             System.out.println("CPF inválido. Digite apenas números.");
-            return; // Finaliza o programa caso CPF seja inválido
+            return;             
         }
     
-        // Validação de nome e CPF
-        if (usuario.validarUsuario("Rhauan", cpfLong)) { // Passa o cpfLong para o método
+        
+        if (usuario.validarUsuario("Maria", cpfLong)) { 
             System.out.println("Escolha uma opção (saque/deposito):");
             String opcao = scanner.nextLine();
     
