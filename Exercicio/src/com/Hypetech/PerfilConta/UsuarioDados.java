@@ -3,11 +3,19 @@ import java.util.Scanner;
 
 public class UsuarioDados {
     private String nome;
+<<<<<<< HEAD
     private long cpf; // Usar long para suportar CPF com até 11 dígitos
     private double saldo = 300.00;
     private Scanner scanner = new Scanner(System.in);
 
     // Métodos para capturar o nome e o CPF
+=======
+    private long cpf; 
+    private double saldo = 300.00;
+    private Scanner scanner = new Scanner(System.in);
+
+    
+>>>>>>> teste
     public void SalvarNome() {
         System.out.println("Digite seu nome:");
         this.nome = scanner.nextLine();
@@ -15,6 +23,7 @@ public class UsuarioDados {
 
     public void SalvarCpf() {
         System.out.println("Digite seu CPF:");
+<<<<<<< HEAD
         this.cpf = scanner.nextLong();  // CPF agora como long para números grandes
     }
 
@@ -24,6 +33,17 @@ public class UsuarioDados {
     }
 
     // Método para processar a opção do usuário
+=======
+        this.cpf = scanner.nextLong();  
+    }
+
+    
+    public boolean validarUsuario(String nome, long cpf) {
+        return this.nome.equals(nome) && this.cpf == cpf; // 
+    }
+
+    
+>>>>>>> teste
     public void processarOpcao(String usuarioOpcao, double valor) {
         if (usuarioOpcao.equalsIgnoreCase("saque")) {
             Sacar(valor);
