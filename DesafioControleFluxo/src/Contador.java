@@ -9,11 +9,11 @@ public class Contador {
 		int parametroDois = terminal.nextInt();
 		
 		try {
-			//chamando o método contendo a lógica de contagem
+
 			contar(parametroUm, parametroDois);
 		
 		}catch (ParametrosInvalidosException e) {
-			//imprimir a mensagem: O segundo parâmetro deve ser maior que o primeiro
+			
 			System.out.println(e.getMessage());
 		}
 		
@@ -21,12 +21,12 @@ public class Contador {
 		
 	}
 	static void contar(int parametroUm, int parametroDois ) throws ParametrosInvalidosException {
-		//validar se parametroUm é MAIOR que parametroDois e lançar a exceção
+		
         if (parametroUm > parametroDois){
 			throw new ParametrosInvalidosException();
 		}     
         else{
-			//realizar o for para imprimir os números com base na variável contagem
+			
 			int contagem = parametroDois - parametroUm;		
 
         	for (int i = parametroUm; i <= parametroDois; i++) {
